@@ -1,0 +1,71 @@
+/* Gümüşel Labs: ortak stil. Renkler gümüş tonlu nötrler + tek vurgu. */
+:root {
+  --bg: #f3f4f6; --surface: #ffffff; --line: #d9dde3; --fg: #171b22; --muted: #5a6472;
+  --accent: #0f7c86; --accent-fg: #ffffff;
+  --silver: linear-gradient(135deg, #59626f, #9aa3b0 45%, #4f5864);
+}
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #0f1216; --surface: #181c22; --line: #2a3039; --fg: #eef1f5; --muted: #9aa5b4;
+    --accent: #45d6cc; --accent-fg: #06282b;
+    --silver: linear-gradient(135deg, #aeb7c4, #f1f4f8 45%, #8f99a8); color-scheme: dark; }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--bg); color: var(--fg); font: 17px/1.6 "Inter", system-ui, "Segoe UI", Roboto, sans-serif; }
+a { color: var(--accent); }
+img { max-width: 100%; display: block; }
+.wrap { max-width: 1040px; margin: 0 auto; padding: 0 20px; }
+
+/* Dil: html[data-l] hangi dildeyse diğerinin öğeleri gizlenir */
+html[data-l="tr"] [lang="en"], html[data-l="en"] [lang="tr"] { display: none !important; }
+
+header.top { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 22px; }
+.brand { font: 700 1.25rem/1 "Space Grotesk", system-ui, sans-serif; letter-spacing: -0.01em; color: var(--fg); text-decoration: none; display: inline-flex; align-items: center; gap: 10px; }
+.brand .mark { width: 30px; height: 30px; border-radius: 9px; background: linear-gradient(135deg, #8a94a3, #e3e8ef 45%, #7b8594); display: grid; place-items: center; color: #171b22; font-size: 1rem; }
+.brand b { background: var(--silver); -webkit-background-clip: text; background-clip: text; color: transparent; }
+nav.links { display: flex; align-items: center; gap: 18px; font-size: 0.95rem; }
+nav.links a { color: var(--muted); text-decoration: none; }
+nav.links a:hover { color: var(--fg); }
+.lang { border: 1px solid var(--line); background: var(--surface); color: var(--fg); border-radius: 999px; padding: 6px 12px; font: inherit; font-size: 0.85rem; cursor: pointer; }
+
+.hero { padding-block: 56px 40px; }
+.hero h1 { font: 700 clamp(2.2rem, 6vw, 3.6rem)/1.05 "Space Grotesk", system-ui, sans-serif; letter-spacing: -0.03em; margin: 0 0 18px; text-wrap: balance; max-width: 16ch; }
+.hero p { color: var(--muted); max-width: 56ch; margin: 0; font-size: 1.1rem; }
+
+h2 { font: 700 1.5rem/1.2 "Space Grotesk", system-ui, sans-serif; letter-spacing: -0.02em; margin: 0 0 18px; }
+section { padding-block: 34px; }
+
+.projects { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 18px; }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 18px; overflow: hidden; display: flex; flex-direction: column; text-decoration: none; color: inherit; transition: transform .15s, border-color .15s; }
+a.card:hover { transform: translateY(-3px); border-color: var(--accent); }
+.card .shot { aspect-ratio: 1024 / 500; object-fit: cover; width: 100%; height: auto; background: #0a6878; }
+.card .body { padding: 16px 18px 18px; display: flex; flex-direction: column; gap: 8px; }
+.card h3 { margin: 0; font: 700 1.15rem/1.2 "Space Grotesk", system-ui, sans-serif; }
+.card p { margin: 0; color: var(--muted); font-size: 0.95rem; }
+.tag { align-self: flex-start; font-size: 0.75rem; letter-spacing: 0.06em; text-transform: uppercase; border: 1px solid var(--line); border-radius: 999px; padding: 3px 10px; color: var(--muted); }
+.card.empty { border-style: dashed; justify-content: center; min-height: 220px; align-items: center; text-align: center; color: var(--muted); padding: 20px; }
+
+.btn { display: inline-flex; align-items: center; gap: 8px; background: var(--accent); color: var(--accent-fg); text-decoration: none; font-weight: 600; border-radius: 12px; padding: 12px 20px; }
+.btn.ghost { background: transparent; color: var(--fg); border: 1px solid var(--line); }
+.btn[aria-disabled="true"] { opacity: 0.6; pointer-events: none; }
+
+/* Oyun sayfası */
+.game-head { display: flex; gap: 22px; align-items: center; flex-wrap: wrap; padding-block: 36px 18px; }
+.game-head img { width: 112px; height: 112px; border-radius: 26px; }
+.game-head h1 { font: 700 clamp(1.9rem, 5vw, 2.8rem)/1.1 "Space Grotesk", system-ui, sans-serif; letter-spacing: -0.02em; margin: 0 0 6px; }
+.game-head p { margin: 0; color: var(--muted); }
+.actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 16px; }
+.shots { display: flex; gap: 14px; overflow-x: auto; padding-bottom: 10px; scroll-snap-type: x mandatory; }
+.shots img { height: 460px; width: auto; max-width: none; border-radius: 18px; border: 1px solid var(--line); scroll-snap-align: start; }
+.features { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; padding: 0; margin: 0; list-style: none; }
+.features li { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 14px 16px; }
+.features b { display: block; margin-bottom: 2px; }
+.features span { color: var(--muted); font-size: 0.95rem; }
+
+.prose { max-width: 70ch; }
+.prose h1 { font: 700 2rem/1.15 "Space Grotesk", system-ui, sans-serif; letter-spacing: -0.02em; }
+.prose h2 { font-size: 1.15rem; margin-top: 1.8em; margin-bottom: 0.4em; }
+.prose small { color: var(--muted); }
+
+footer { border-top: 1px solid var(--line); margin-top: 40px; padding-block: 26px 40px; color: var(--muted); font-size: 0.9rem; display: flex; gap: 16px; justify-content: space-between; flex-wrap: wrap; }
+footer a { color: var(--muted); }
