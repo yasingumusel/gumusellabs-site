@@ -1,1 +1,65 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><defs><linearGradient id="s" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8a94a3"/><stop offset=".45" stop-color="#e3e8ef"/><stop offset="1" stop-color="#7b8594"/></linearGradient></defs><rect width="64" height="64" rx="18" fill="url(#s)"/><text x="32" y="45" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="38" fill="#171b22">G</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2b1f52"/><stop offset="1" stop-color="#120d26"/></linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#7dffa6" stop-opacity="0.55"/><stop offset="1" stop-color="#7dffa6" stop-opacity="0"/></radialGradient>
+    <linearGradient id="silver" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f4f7fb"/><stop offset="0.5" stop-color="#b9c2cf"/><stop offset="1" stop-color="#8691a1"/></linearGradient>
+    <linearGradient id="silverDark" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#c3cbd6"/><stop offset="1" stop-color="#6d7787"/></linearGradient>
+    <linearGradient id="pot" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#3a4050"/><stop offset="0.45" stop-color="#232733"/><stop offset="1" stop-color="#12141c"/></linearGradient>
+    <linearGradient id="potion" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8dffb0"/><stop offset="1" stop-color="#27c46b"/></linearGradient>
+    <clipPath id="round"><rect width="1024" height="1024" rx="230"/></clipPath>
+  </defs>
+  <rect width="1024" height="1024" rx="230" fill="url(#bg)"/>
+  <g clip-path="url(#round)">
+    <!-- iksirin ışığı -->
+    <ellipse cx="500" cy="560" rx="430" ry="330" fill="url(#glow)"/>
+
+    <!-- gümüş el: sağ üstten uzanır, parmaklar kazana doğru -->
+    <g transform="translate(712 196) rotate(30)" stroke="#120d26" stroke-width="12" stroke-linejoin="round">
+      <rect x="-66" y="-420" width="132" height="380" rx="26" fill="url(#silverDark)"/>
+      <rect x="-84" y="-92" width="168" height="54" rx="22" fill="url(#silver)"/>
+      <rect x="-80" y="40" width="38" height="118" rx="19" fill="url(#silver)"/>
+      <rect x="-38" y="46" width="38" height="140" rx="19" fill="url(#silver)"/>
+      <rect x="4" y="46" width="38" height="128" rx="19" fill="url(#silver)"/>
+      <rect x="46" y="38" width="36" height="98" rx="18" fill="url(#silver)"/>
+      <rect x="-128" y="-38" width="42" height="116" rx="21" fill="url(#silver)" transform="rotate(28 -107 -38)"/>
+      <rect x="-88" y="-52" width="176" height="140" rx="52" fill="url(#silver)"/>
+    </g>
+
+    <!-- düşen malzemeler -->
+    <g stroke="#120d26" stroke-width="10" stroke-linejoin="round">
+      <path d="M0 -44 L12 -14 L44 -12 L19 9 L27 41 L0 23 L-27 41 L-19 9 L-44 -12 L-12 -14 Z" fill="#ffd34d" transform="translate(604 414) rotate(14)"/>
+      <path d="M0 -40 Q34 -10 0 40 Q-34 -10 0 -40 Z" fill="#59e07f" transform="translate(498 438) rotate(-38)"/>
+      <path d="M-26 -12 L-12 -30 L12 -30 L26 -12 L0 30 Z" fill="#ff7ad9" transform="translate(566 506) rotate(10)"/>
+    </g>
+
+    <!-- kazan -->
+    <g stroke="#0b0914" stroke-width="12" stroke-linejoin="round">
+      <rect x="300" y="820" width="46" height="74" rx="18" fill="#12141c"/>
+      <rect x="678" y="820" width="46" height="74" rx="18" fill="#12141c"/>
+      <path d="M232 600 Q200 880 512 880 Q824 880 792 600 Z" fill="url(#pot)"/>
+      <ellipse cx="512" cy="596" rx="300" ry="66" fill="#2c3140"/>
+      <ellipse cx="512" cy="596" rx="252" ry="46" fill="url(#potion)"/>
+    </g>
+    <!-- kenardan taşan iksir -->
+    <path d="M330 632 q4 70 26 70 q22 0 22 -52 Z" fill="#3fdc80" stroke="#0b0914" stroke-width="10" stroke-linejoin="round"/>
+    <path d="M640 640 q2 48 20 48 q18 0 18 -40 Z" fill="#3fdc80" stroke="#0b0914" stroke-width="10" stroke-linejoin="round"/>
+    <path d="M270 660 Q250 800 330 840" fill="none" stroke="#5a6274" stroke-width="16" stroke-linecap="round" opacity="0.7"/>
+
+    <!-- alevler -->
+    <g transform="translate(512 0) scale(0.86 1) translate(-512 52)" stroke="#0b0914" stroke-width="10" stroke-linejoin="round">
+      <path d="M330 900 Q300 840 350 800 Q352 850 390 846 Q380 800 420 770 Q430 840 470 850 Q470 810 512 780 Q554 810 554 850 Q594 840 604 770 Q644 800 634 846 Q672 850 674 800 Q724 840 694 900 Z" fill="#ff7a1a"/>
+      <path d="M400 900 Q390 860 430 846 Q440 880 470 880 Q480 850 512 836 Q544 850 554 880 Q584 880 594 846 Q634 860 624 900 Z" fill="#ffd34d"/>
+    </g>
+
+    <!-- köpükler -->
+    <g fill="#8dffb0" stroke="#0b0914" stroke-width="10">
+      <circle cx="420" cy="586" r="34"/><circle cx="520" cy="574" r="46"/><circle cx="612" cy="592" r="30"/>
+    </g>
+    <g fill="#ffffff" opacity="0.85">
+      <circle cx="408" cy="574" r="9"/><circle cx="504" cy="556" r="13"/><circle cx="602" cy="582" r="8"/>
+    </g>
+    <g fill="none" stroke="#8dffb0" stroke-width="9">
+      <circle cx="386" cy="470" r="24"/><circle cx="330" cy="380" r="15"/><circle cx="440" cy="340" r="11"/><circle cx="690" cy="500" r="18"/>
+    </g>
+  </g>
+</svg>

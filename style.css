@@ -21,7 +21,7 @@ html[data-l="tr"] [lang="en"], html[data-l="en"] [lang="tr"] { display: none !im
 
 header.top { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 22px; }
 .brand { font: 700 1.25rem/1 "Space Grotesk", system-ui, sans-serif; letter-spacing: -0.01em; color: var(--fg); text-decoration: none; display: inline-flex; align-items: center; gap: 10px; }
-.brand .mark { width: 30px; height: 30px; border-radius: 9px; background: linear-gradient(135deg, #8a94a3, #e3e8ef 45%, #7b8594); display: grid; place-items: center; color: #171b22; font-size: 1rem; }
+.brand .mark { width: 34px; height: 34px; border-radius: 9px; }
 .brand b { background: var(--silver); -webkit-background-clip: text; background-clip: text; color: transparent; }
 nav.links { display: flex; align-items: center; gap: 18px; font-size: 0.95rem; }
 nav.links a { color: var(--muted); text-decoration: none; }
