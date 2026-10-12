@@ -69,3 +69,12 @@ a.card:hover { transform: translateY(-3px); border-color: var(--accent); }
 
 footer { border-top: 1px solid var(--line); margin-top: 40px; padding-block: 26px 40px; color: var(--muted); font-size: 0.9rem; display: flex; gap: 16px; justify-content: space-between; flex-wrap: wrap; }
 footer a { color: var(--muted); }
+
+/* Dikey tanıtım görseli kart başlığında: yerleşkenin olduğu bant görünsün */
+.card .shot.tall { object-position: 50% 40%; }
+/* Proje sayfasında dikey fragman + yanında metin */
+.split { display: grid; grid-template-columns: minmax(0, 320px) minmax(0, 1fr); gap: 28px; align-items: start; }
+.split video, .split .poster { width: 100%; height: auto; border-radius: 18px; border: 1px solid var(--line); background: #0b1410; }
+.split .features { grid-template-columns: 1fr; }
+@media (max-width: 720px) { .split { grid-template-columns: 1fr; } .split video { max-width: 320px; margin-inline: auto; } }
+.note { border-left: 3px solid var(--accent); padding: 4px 0 4px 14px; color: var(--muted); }
