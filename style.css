@@ -85,3 +85,15 @@ footer a { color: var(--muted); }
 .hero-logo { width: 240px; height: 240px; flex: none; border-radius: 54px; box-shadow: 0 18px 40px rgba(160, 80, 30, 0.28); }
 @media (max-width: 760px) { .hero { flex-direction: column-reverse; align-items: flex-start; gap: 22px; } .hero-logo { width: 120px; height: 120px; border-radius: 27px; } }
 .brand { white-space: nowrap; }
+
+/* Marka yazisi: gumus "Gumusel" + koyu "Labs", altinda aralikli "GAMES & APPS" (logo dosyasindaki yazili logoyla ayni) */
+:root { --warm: #c8552b; }
+@media (prefers-color-scheme: dark) { :root { --warm: #ffb37a; } }
+.brand { gap: 12px; }
+.brand .mark { width: 46px; height: 46px; border-radius: 11px; }
+.brand .word { display: flex; flex-direction: column; gap: 5px; }
+.brand .name { font-size: 1.7rem; letter-spacing: -0.035em; line-height: 1; }
+.brand .sub { font: 500 0.6rem/1 "Space Grotesk", system-ui, sans-serif; letter-spacing: 0.32em; text-transform: uppercase; color: var(--warm); }
+@media (max-width: 480px) { .brand .name { font-size: 1.35rem; } .brand .mark { width: 40px; height: 40px; } .brand .sub { font-size: 0.52rem; } }
+/* Dar ekranda marka yazisina yer kalsin: sayfa ici baglantilar gizlenir, dil dugmesi kalir */
+@media (max-width: 480px) { nav.links a { display: none; } }
