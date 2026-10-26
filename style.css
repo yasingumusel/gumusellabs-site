@@ -69,6 +69,7 @@ a.card:hover { transform: translateY(-3px); border-color: var(--accent); }
 
 footer { border-top: 1px solid var(--line); margin-top: 40px; padding-block: 26px 40px; color: var(--muted); font-size: 0.9rem; display: flex; gap: 16px; justify-content: space-between; flex-wrap: wrap; }
 footer a { color: var(--muted); }
+footer .legal { flex-basis: 100%; font-size: 0.78rem; line-height: 1.5; }
 
 /* Dikey tanıtım görseli kart başlığında: yerleşkenin olduğu bant görünsün */
 .card .shot.tall { object-position: 50% 40%; }
