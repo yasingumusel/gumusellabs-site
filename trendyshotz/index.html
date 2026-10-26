@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en" data-l="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TrendyShotz – Gumusel Labs</title>
+<meta name="description" content="TrendyShotz: a YouTube Shorts channel about strange history, made by an automated pipeline built on Claude, with a human approval step before every upload.">
+<meta property="og:title" content="TrendyShotz">
+<meta property="og:image" content="https://www.gumusellabs.com/assets/trendyshotz/feature.jpg">
+<link rel="icon" href="/assets/icon_192.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Space+Grotesk:wght@500;700&display=swap">
+<link rel="stylesheet" href="/style.css?v=6">
+<script src="/lang.js?v=4"></script>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="/"><img class="mark" src="/assets/icon_192.png" alt="" width="34" height="34"><span class="word"><span class="name"><b>Gumusel</b> Labs</span><span class="sub">Games &amp; Apps</span></span></a>
+    <nav class="links">
+      <a href="/#projects"><span lang="tr">Projeler</span><span lang="en">Projects</span></a>
+      <button class="lang" type="button" aria-label="Language"><span lang="tr">EN</span><span lang="en">TR</span></button>
+    </nav>
+  </header>
+
+  <div class="game-head">
+    <div>
+      <span class="tag"><span lang="tr">YouTube · Claude ile otomasyon</span><span lang="en">YouTube · Automated with Claude</span></span>
+      <h1 style="margin-top:12px">TrendyShotz</h1>
+      <p lang="tr">Tarihin ve tarih öncesi yaşamın tuhaf köşelerinden kısa videolar. Konudan yüklemeye kadar her adımı bir otomasyon yapıyor; her video yayından önce elle onaylanıyor.</p>
+      <p lang="en">Short videos from the strange corners of history and prehistoric life. An automated pipeline handles every step from topic to upload, and every video is approved by hand before it goes live.</p>
+      <p style="margin-top:14px"><a href="https://www.youtube.com/@TRENDYSHOTZ" target="_blank" rel="noopener"><span lang="tr">Kanalı YouTube'da aç</span><span lang="en">Open the channel on YouTube</span></a></p>
+    </div>
+  </div>
+
+  <section>
+    <h2><span lang="tr">Nasıl çalışıyor</span><span lang="en">How it works</span></h2>
+    <ul class="features" lang="tr">
+      <li><b>1. Araştırma</b><span>Benzer kanalların yeni Shorts'ları ve anahtar kelime sonuçları toplanır; kanalın kendi en iyi ve en zayıf videoları da eklenir.</span></li>
+      <li><b>2. Konu ve senaryo: Claude</b><span>Claude Sonnet bu araştırmaya bakıp daha önce işlenmemiş bir konu seçer. Açılış cümlesini, sahneleri, başlığı, açıklamayı, etiketleri ve müzik havasını yazar.</span></li>
+      <li><b>3. Doğruluk kontrolü: Claude + web araması</b><span>Claude senaryodaki en şüpheli iddiaları web aramasıyla kontrol eder ve yanlışları düzeltir. Ne kontrol edildiği onay ekranında not olarak görünür.</span></li>
+      <li><b>4. Görseller</b><span>Her sahne için dikey bir görsel üretilir (Flux).</span></li>
+      <li><b>5. Ses</b><span>Seslendirme (ElevenLabs), sahne efektleri ve videonun havasına uygun müzik; ses Shorts standardına dengelenir.</span></li>
+      <li><b>6. Montaj</b><span>Video Remotion ile kurulur: görsellere hareket, kelime kelime altyazı ve kapanış kartı.</span></li>
+      <li><b>7. İnsan onayı</b><span>Her video bir onay ekranına düşer. İzlenir, başlık ve açıklama düzenlenir, sonra yayınlanır ya da reddedilir.</span></li>
+      <li><b>8. Yükleme</b><span>Onaylanan video YouTube Data API ile yüklenir, yapay zekâ içeriği beyanı işaretlenir ve ABD izleyicisi için planlı saate zamanlanır.</span></li>
+    </ul>
+    <ul class="features" lang="en">
+      <li><b>1. Research</b><span>Recent Shorts from similar channels and keyword results are collected, along with the channel's own best and weakest videos.</span></li>
+      <li><b>2. Topic and script: Claude</b><span>Claude Sonnet reads that research and picks a topic the channel hasn't covered yet. It writes the hook, the scenes, the title, description, tags and the music mood.</span></li>
+      <li><b>3. Fact check: Claude + web search</b><span>Claude checks the script's most doubtful claims with web search and fixes what's wrong. What was checked appears as a note on the review screen.</span></li>
+      <li><b>4. Images</b><span>A vertical image is generated for each scene (Flux).</span></li>
+      <li><b>5. Sound</b><span>Voice-over (ElevenLabs), scene effects and music that fits the mood, balanced to the Shorts loudness standard.</span></li>
+      <li><b>6. Editing</b><span>The video is assembled with Remotion: motion on the images, word-by-word captions and an end card.</span></li>
+      <li><b>7. Human approval</b><span>Every video lands on a review screen. It's watched, the title and description can be edited, and then it's published or rejected.</span></li>
+      <li><b>8. Upload</b><span>Approved videos are uploaded with the YouTube Data API, marked as AI-generated content and scheduled for US viewing hours.</span></li>
+    </ul>
+  </section>
+
+  <section>
+    <p class="note" lang="tr">Otomasyon her gece GitHub Actions üzerinde çalışır ve onay kuyruğunda her zaman birkaç video hazır tutar. Claude kullanılamadığında (örneğin API kredisi bittiğinde) senaryoyu yedek bir model yazar ve doğruluk kontrolü Wikipedia üzerinden yapılır; insan onayı her durumda aynıdır. İletişim: <a href="mailto:support@gumusellabs.com">support@gumusellabs.com</a></p>
+    <p class="note" lang="en">The pipeline runs nightly on GitHub Actions and keeps a few videos waiting in the review queue. When Claude can't be used (for example, when API credits run out), a backup model writes the script and the fact check falls back to Wikipedia; the human approval step stays the same. Contact: <a href="mailto:support@gumusellabs.com">support@gumusellabs.com</a></p>
+  </section>
+
+  <footer>
+    <span>© 2026 Gumusel Labs</span>
+    <span><a href="/"><span lang="tr">Ana sayfa</span><span lang="en">Home</span></a></span>
+  </footer>
+</div>
+</body>
+</html>
